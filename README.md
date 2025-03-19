@@ -7,3 +7,4 @@
 ## Methods
  - Addition 1: This method uses the ADC mnemonic to add a value stored at a memory location to the accumulator, and stores the results.
  - Multiplication 1: This method uses looped addition to multiply a value by another.
+ - Multiplication 2: This method uses the same stepped addition method as Multiplication 1, but has the ability to handle 16-bit results. It stores the high byte at $00F2, and the low at $00F2
