@@ -3,7 +3,7 @@
 ; 00F1 : Multiplier
 ; 00F2-00F3 : Result
 
-  .org $0000
+  .org $C000
 
   lda #$07 ; Multiplicand Value
   sta $F0
