@@ -13,11 +13,11 @@
   lda #$00 ; clear accumulator
   ldx #$00 ; clear x
 addLoop:
-  clc
-  adc $F0
-  inx
-  cpx $F1
-  bne addLoop
+  clc          ; clear carry for accurate addition
+  adc $F0      ; add multiplicand
+  inx          ; increment x
+  cpx $F1      ; compare x to multiplier
+  bne addLoop  ; stop when x = multiplier
 
-  sta $F2
+  sta $F2      ; store result
   brk
