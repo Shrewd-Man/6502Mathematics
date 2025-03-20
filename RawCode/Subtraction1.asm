@@ -5,14 +5,14 @@
 
   .org $C000
 
-  lda #$FF
+  lda #$FF  ; Minuend value
   sta $F0
-  lda #$0D
+  lda #$0D  ; Subtrahend value
   sta $F1
 
-  sec
+  sec       ; Set carry flag for accurate subtraction
   lda $F0
-  sbc $F1
+  sbc $F1   ; Subtract
 
-  sta $F2
+  sta $F2   ; Store result
   brk
