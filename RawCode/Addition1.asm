@@ -12,8 +12,8 @@
   sta $F1
 
 Addition:
-  lda $F0
-  adc $F1
-  sta $F2
+  lda $F0 ; load addend 1
+  adc $F1 ; add addend 2
+  sta $F2 ; store result
 
   brk
